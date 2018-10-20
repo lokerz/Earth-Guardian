@@ -1,10 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Keyboard.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LevelManager.cs">
     <Files>
-      <File FileName="Assets\Option.cs" Line="11" Column="3" />
-      <File FileName="Assets\Keyboard.cs" Line="28" Column="4" />
-      <File FileName="Assets\Manager.cs" Line="8" Column="29" />
+      <File FileName="Assets\Scripts\WordManager.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\WordGenerator.cs" Line="13" Column="1" />
+      <File FileName="Assets\Scripts\Word.cs" Line="24" Column="8" />
+      <File FileName="Assets\Scripts\Meteor.cs" Line="31" Column="15" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="10" Column="78" />
+      <File FileName="Assets\LevelManager.cs" Line="28" Column="24" />
+      <File FileName="Assets\Scripts\Manager.cs" Line="52" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
