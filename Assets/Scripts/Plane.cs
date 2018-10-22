@@ -14,8 +14,10 @@ public class Plane : MonoBehaviour {
 	private GameObject Turret1;
 	private GameObject Turret2;
 	private int fireNum = 0;
+	private AudioSource laser;
 
 	void Start(){
+		laser = GameObject.Find ("Laser").GetComponent<AudioSource> ();
 		Turret1 = GameObject.Find ("Turret1");
 		Turret2 = GameObject.Find ("Turret2");
 	}
@@ -27,10 +29,12 @@ public class Plane : MonoBehaviour {
 		}
 		if (isFiring) {
 			if (fireNum % 2 == 0) {
+				laser.Play ();
 				Instantiate (bulletPrefab, Turret1.transform.position, Quaternion.identity, Turret1.transform);
 				fireNum++;
 				isFiring = false;
 			} else {
+				laser.Play ();
 				Instantiate (bulletPrefab, Turret2.transform.position, Quaternion.identity, Turret2.transform);
 				fireNum++;
 				isFiring = false;

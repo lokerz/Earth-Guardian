@@ -95,7 +95,6 @@ public class PlayerConfig : MonoBehaviour {
 	}
 
 	public void SetLetterType(bool type){
-		
 		if (type)
 			lType = 1;
 		else

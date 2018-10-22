@@ -20,7 +20,7 @@ public class Barrier : MonoBehaviour {
 		if (isBarrier) {
 			gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 			gameObject.GetComponent<Transform>().localScale += new Vector3 (speed*Time.deltaTime, speed*Time.deltaTime);
-			gameObject.GetComponent<Transform> ().Rotate (0f, 0f, 1f);
+			gameObject.GetComponent<Transform> ().Rotate (0f, 0f, 4);
 			if (gameObject.GetComponent<Transform> ().localScale.x >= maxSize) {
 				isBarrier = false;
 				StageManager.barrierCount--;

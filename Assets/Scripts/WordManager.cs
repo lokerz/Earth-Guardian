@@ -46,8 +46,10 @@ public class WordManager : MonoBehaviour {
 			if (activeWord.GetNextLetter () == x) {
 				activeWord.Type ();
 				StageManager.streak++;
-			} else
+			} else {
 				StageManager.streak = 0;
+				Vibrate ();
+			}
 		} 
 		else {
 			foreach (Word word in words) {
@@ -62,8 +64,10 @@ public class WordManager : MonoBehaviour {
 			if (isMatch) {
 				StageManager.streak++;
 				isMatch = false;
-			} else
+			} else {
 				StageManager.streak = 0;
+				Vibrate ();
+			}
 		}
 
 		if(hasActive && activeWord.DoneCheck()){
@@ -78,6 +82,13 @@ public class WordManager : MonoBehaviour {
 			if (words[i].word == input)
 				words.Remove (words[i]);
 		}
+	}
+
+
+	public void Vibrate(){
+		#if UNITY_ANDROID
+		Handheld.Vibrate ();
+		#endif
 	}
 
 }

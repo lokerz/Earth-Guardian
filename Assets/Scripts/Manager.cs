@@ -24,12 +24,12 @@ public class Manager : MonoBehaviour {
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.Escape) && isOption)
 			Option ();
-		else
+		else if(Input.GetKeyDown (KeyCode.Escape))
 			Application.Quit ();
 	}
 	public void Play (){
 		if (isOption == false) {
-			StageManager.level = 1	;
+			StageManager.level = 1;
 			stageManager.LoadLevel ();
 		}
 	}

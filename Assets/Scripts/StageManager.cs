@@ -23,11 +23,7 @@ public class StageManager : MonoBehaviour {
 		DontDestroyOnLoad (this.gameObject);
 	}
 	void Start(){
-		Time.timeScale = 1;
-		if (level % 5 == 0)
-			barrierCount++;
-		if (level == 1)
-			streak = 0;
+		
 	}
 	void Update(){
 		if (streak <= 10)
@@ -43,6 +39,7 @@ public class StageManager : MonoBehaviour {
 		
 		if (streak > longestStreak)
 			longestStreak = streak;
+
 	}
 	public void LoadLevel(){
 		SceneManager.LoadScene ("gameplay");

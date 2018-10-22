@@ -13,8 +13,10 @@ public class MeteorBoss : MonoBehaviour {
 	private WordManager wordManager;
 	private LevelManager levelManager;
 	private Spawner spawner;
+	private AudioSource blast;
 
 	void Start () {
+		blast = GameObject.Find ("Blast").GetComponent<AudioSource> ();
 		spawner = GameObject.Find ("WordManager").GetComponent<Spawner>();
 		wordManager = GameObject.Find ("WordManager").GetComponent<WordManager>();
 		levelManager = GameObject.Find ("LevelManager").GetComponent<LevelManager>();
@@ -62,7 +64,9 @@ public class MeteorBoss : MonoBehaviour {
 	}
 
 	public void RemoveWord(){
+		blast.Play ();
 		StartCoroutine ("DeleteObject");
+
 	}
 
 	IEnumerator DeleteObject(){

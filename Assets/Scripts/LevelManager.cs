@@ -51,6 +51,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void StartLevel(int level){
 		if (isBossStage) {
+			StageManager.barrierCount++;
 			int length = 6 + level/5;
 			while(wordsPerLevel.Count != 5){
 				string temp = wordGenerator.RandomWord ();
@@ -70,16 +71,21 @@ public class LevelManager : MonoBehaviour {
 			else 
 				maxLettersPerLevel = 10;
 		
-			levelDifficulty = level * level + 15;
+			levelDifficulty = (level * level)/2 + 15;
 			availableLetters = levelDifficulty;
 			while (availableLetters > 0) {
 				bool valid = true;
 				string temp = wordGenerator.RandomWord ();
 				if (temp.Length <= maxLettersPerLevel) {
-				
-					for (int i = 0; i < index; i++)
-						if (temp [0] == wordsPerLevel [i] [0])
-							valid = false;
+					if (index <= 25) {
+						for (int i = 0; i < index; i++)
+							if (temp [0] == wordsPerLevel [i] [0])
+								valid = false;
+					} else {
+						for (int i = 25; i < index; i++)
+							if (temp [0] == wordsPerLevel [i] [0])
+								valid = false;
+					}
 					if (valid) {
 						wordsPerLevel.Add (temp);
 						index++;
