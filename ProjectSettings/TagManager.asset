@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Keys
+  - Bullet
+  - Meteor
   layers:
   - Default
   - TransparentFX

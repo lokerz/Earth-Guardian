@@ -4,18 +4,28 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class Option : MonoBehaviour {
-	private Manager manager;
-	public Button buttonSize1;
-	public Button buttonSize2;
-	public Button buttonSize3;
 
 	void Start(){
-		manager = GameObject.Find ("Manager").GetComponent<Manager> ();
+		
+		GameObject.Find ("SliderSize").GetComponent<Slider> ().value = PlayerConfig.kSize;
+		GameObject.Find ("SliderTransparency").GetComponent<Slider> ().value = PlayerConfig.kTransparency;
+		GetComponentInChildren<Dropdown> ().value = PlayerConfig.kType;
+		if(PlayerConfig.lType == 1)
+			GetComponentInChildren<Toggle> ().isOn = true;
+		else
+			GetComponentInChildren<Toggle> ().isOn = false;
+		
 	}
-
 	void Update(){
-		
-
+		if (PlayerConfig.isReset) {
+			GetComponentInChildren<Toggle> ().isOn = false;
+			GameObject.Find ("SliderSize").GetComponent<Slider> ().value = 1.0f;
+			GameObject.Find ("SliderTransparency").GetComponent<Slider> ().value = 255f;
+			GetComponentInChildren<Dropdown> ().value = 0;
+			PlayerConfig.isReset = false;
+		}
 	}
-		
+
+
+			
 }

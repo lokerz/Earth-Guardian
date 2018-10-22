@@ -3,32 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Keyboard : MonoBehaviour {
-	private Manager manager;
-	public GameObject[] keys;
-	public float size;
+	public GameObject keyboard1;
+	public GameObject keyboard2;
+	public GameObject keyboard3;
+	public GameObject keyboard4;
 
-
-	void Start(){
-		manager = GameObject.Find ("Manager").GetComponent<Manager> ();
-		if (keys == null)
-			keys = GameObject.FindGameObjectsWithTag ("Keys");
-		
+	public void QWERTY(){
+		keyboard1.SetActive (true);
+		keyboard2.SetActive (false);
+		keyboard3.SetActive (false);
+		keyboard4.SetActive (false);
 	}
-
-	void Update(){
-	//	foreach(GameObject key in keys)
-	//		key.transform.localScale = new Vector3(manager.KeySize, manager.KeySize, 0);
+	public void QWERTZ(){
+		keyboard1.SetActive (false);
+		keyboard2.SetActive (true);
+		keyboard3.SetActive (false);
+		keyboard4.SetActive (false);
 	}
-	public void ChangeKeySize(int size){
-		if (size == 100)
-			manager.KeySize = 1.1f;
-		else if (size == 120)
-			manager.KeySize = 1.2f;
-		else
-			manager.KeySize = 1.0f;
-
-		//foreach(GameObject key in keys)
-		//	key.transform.localScale += Vector3(1.0f-manager.KeySize,1.0f-manager.KeySize,0);
+	public void AZERTY(){
+		keyboard1.SetActive (false);
+		keyboard2.SetActive (false);
+		keyboard3.SetActive (true);
+		keyboard4.SetActive (false);
 	}
-		
+	public void DVORAK(){
+		keyboard1.SetActive (false);
+		keyboard2.SetActive (false);
+		keyboard3.SetActive (false);
+		keyboard4.SetActive (true);
+	}
 }

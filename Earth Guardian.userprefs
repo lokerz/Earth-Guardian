@@ -1,14 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LevelManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StageManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\WordManager.cs" Line="6" Column="2" />
-      <File FileName="Assets\Scripts\WordGenerator.cs" Line="13" Column="1" />
-      <File FileName="Assets\Scripts\Word.cs" Line="24" Column="8" />
-      <File FileName="Assets\Scripts\Meteor.cs" Line="31" Column="15" />
-      <File FileName="Assets\Scripts\Spawner.cs" Line="10" Column="78" />
-      <File FileName="Assets\LevelManager.cs" Line="28" Column="24" />
-      <File FileName="Assets\Scripts\Manager.cs" Line="52" Column="4" />
+      <File FileName="Assets\Scripts\WordManager.cs" Line="23" Column="39" />
+      <File FileName="Assets\Scripts\Word.cs" Line="48" Column="27" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="24" Column="53" />
+      <File FileName="Assets\Scripts\Manager2.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\Manager.cs" Line="45" Column="4" />
+      <File FileName="Assets\Scripts\Meteor.cs" Line="40" Column="47" />
+      <File FileName="Assets\Scripts\Option.cs" Line="23" Column="79" />
+      <File FileName="Assets\Scripts\Plane.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\LevelManager.cs" Line="70" Column="9" />
+      <File FileName="Assets\Scripts\MeteorBoss.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StageManager.cs" Line="42" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
